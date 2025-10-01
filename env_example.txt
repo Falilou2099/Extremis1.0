@@ -1,0 +1,100 @@
+# Configuration du Robot de Trading Harmonique
+# Copiez ce fichier vers .env et configurez vos paramètres
+
+# ===========================================
+# CONFIGURATION DE LA PLATEFORME DE TRADING
+# ===========================================
+
+# Plateforme de trading: 'binance' ou 'mt5'
+TRADING_PLATFORM=mt5
+
+# Type de compte: 'demo' ou 'real'
+ACCOUNT_TYPE=demo
+
+# ===========================================
+# CONFIGURATION BINANCE (pour comptes réels)
+# ===========================================
+
+# Clés API Binance (requis pour TRADING_PLATFORM=binance)
+API_KEY=votre_api_key_binance
+API_SECRET=votre_api_secret_binance
+
+# Mode sandbox pour les tests (true/false)
+SANDBOX_MODE=true
+
+# Nom du sous-compte (optionnel)
+SUBACCOUNT_NAME=
+
+# ===========================================
+# CONFIGURATION MT5 (pour comptes démo/réels)
+# ===========================================
+
+# Paramètres de connexion MT5 (optionnels pour démo)
+# Laissez vides pour utiliser le compte démo par défaut
+MT5_LOGIN=
+MT5_PASSWORD=
+MT5_SERVER=
+
+# ===========================================
+# CONFIGURATION TELEGRAM
+# ===========================================
+
+# Token du bot Telegram pour les notifications
+TELEGRAM_BOT_TOKEN=votre_token_telegram
+
+# ID du chat Telegram pour recevoir les notifications
+TELEGRAM_CHAT_ID=votre_chat_id
+
+# ===========================================
+# CONFIGURATION DE TRADING
+# ===========================================
+
+# Symbole à trader (XAUUSD pour l'or, EURUSD pour Forex, BTCUSDT pour Binance)
+SYMBOL=XAUUSD
+
+# Pourcentage de risque par trade (1.0 = 1%)
+RISK_PERCENTAGE=1.0
+
+# Nombre maximum de positions simultanées
+MAX_POSITIONS=3
+
+# ===========================================
+# CONFIGURATION DES LOGS
+# ===========================================
+
+# Niveau de log: DEBUG, INFO, WARNING, ERROR
+LOG_LEVEL=INFO
+
+# ===========================================
+# EXEMPLES DE CONFIGURATION
+# ===========================================
+
+# Pour utiliser MT5 en mode démo avec l'or:
+# TRADING_PLATFORM=mt5
+# ACCOUNT_TYPE=demo
+# SYMBOL=XAUUSD
+# (Laissez MT5_LOGIN, MT5_PASSWORD, MT5_SERVER vides)
+
+# Autres symboles MT5 populaires:
+# SYMBOL=EURUSD  (Euro/Dollar)
+# SYMBOL=GBPUSD  (Livre/Dollar)
+# SYMBOL=USDJPY  (Dollar/Yen)
+# SYMBOL=AUDUSD  (Dollar Australien/Dollar)
+# SYMBOL=USDCAD  (Dollar/Dollar Canadien)
+# SYMBOL=XAUUSD  (Or/Dollar - très volatil, excellent pour patterns)
+
+# Pour utiliser Binance en mode réel:
+# TRADING_PLATFORM=binance
+# ACCOUNT_TYPE=real
+# SYMBOL=BTCUSDT
+# API_KEY=votre_vraie_cle
+# API_SECRET=votre_vrai_secret
+# SANDBOX_MODE=false
+
+# Pour utiliser Binance en mode démo (sandbox):
+# TRADING_PLATFORM=binance
+# ACCOUNT_TYPE=demo
+# SYMBOL=BTCUSDT
+# API_KEY=votre_cle_testnet
+# API_SECRET=votre_secret_testnet
+# SANDBOX_MODE=true

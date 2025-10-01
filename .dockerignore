@@ -1,0 +1,79 @@
+# Fichiers et dossiers à exclure du contexte Docker
+
+# Environnement virtuel Python
+venv/
+env/
+.venv/
+.env/
+
+# Fichiers de cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Logs et données temporaires
+logs/*.log
+*.log
+data/temp/
+*.tmp
+*.temp
+
+# Fichiers de configuration sensibles (seront montés via volumes)
+.env.local
+.env.production
+*.key
+*.pem
+
+# Fichiers Git
+.git/
+.gitignore
+.gitattributes
+
+# Fichiers IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+*.pid
+
+# Documentation et tests
+README.md
+docs/
+tests/
+*.md
+
+# Fichiers Docker (éviter la récursion)
+Dockerfile
+docker-compose*.yml
+.dockerignore
+
+# Fichiers de backup
+*.bak
+*.backup
+*.old
+
+# Fichiers de monitoring (seront créés dans le container)
+monitoring/
+grafana-data/
